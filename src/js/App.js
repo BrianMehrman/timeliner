@@ -1,14 +1,13 @@
 // @flow
 import MetisMenu from 'react-metismenu';
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './css/App.css';
+import logo from './../logo.svg';
+import './../css/App.css';
 
 class App extends Component {
   render() {
     return (
       <div id="wrapper">
-
 
         <div id="page-wrapper">
           <div className="row">
@@ -519,6 +518,7 @@ class App extends Component {
             </div>
           </div>
         </div>
+
       </div>
     );
   }
