@@ -1,10 +1,15 @@
-import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import MetisMenu from 'react-metismenu';
-import App from './js/App';
-import registerServiceWorker from './registerServiceWorker';
-import './css/index.css';
+import { render } from 'react-dom';
+import  { Provider } from 'react-redux';
+import  store from './store';
+import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+import '../node_modules/grommet/grommet-hpe.min.css';
+
+
+render(
+  <Provider store={store()}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
