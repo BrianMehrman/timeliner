@@ -13,7 +13,7 @@ import Title from 'grommet/components/Title';
 import Heading from 'grommet/components/Heading';
 import Section from 'grommet/components/Section';
 import Split from 'grommet/components/Split';
-import Card from 'grommet/components/Card';
+import Table from 'grommet/components/Table';
 import Sidebar from 'grommet/components/Sidebar';
 import Menu from 'grommet/components/Menu';
 import Anchor from 'grommet/components/Anchor';
@@ -31,9 +31,9 @@ class Main extends Component {
         <App className='wrap container-fluid'>
           <Split separator={true} flex='right'>
             <Sidebar colorIndex='neutral-1'
-              pad='none'>
-              <Header pad='medium' justify='between'>
-                <Title>Title</Title>
+              pad='none'
+              size='small'>
+              <Header pad='small' justify='between'>
                 <Box flex='grow' justify='start'>
                   <Menu primary={true}>
                     <Anchor href='#' className='active'>
@@ -59,20 +59,48 @@ class Main extends Component {
                   <Title>Header</Title>
                 </Header>
               </Box>
-              <Hero>
-                <Box direction='row' justify='center' align='center' colorIndex='light-2'>
+              <Box direction='row' justify='center' align='center' size={{height: 'small'}} colorIndex='light-2'>
+                <Hero>
                   <Heading>Hero</Heading>
-                </Box>
-              </Hero>
+                </Hero>
+              </Box>
               <Box direction='column' flex={true} justify='center' align='center' colorIndex='accent-1'>
-                <Box direction='row' colorIndex='light-2'>
-                  Section
-                </Box>
-                <Box direction='row' align='center'>
-                  <Card heading='Card' justify='center' size='small' contentPad='none' margin='none'/>
-                  <Card heading='Card' justify='center' size='small' contentPad='none' margin='none'/>
-                  <Card heading='Card' justify='center' size='small' contentPad='none' margin='none'/>
-                </Box>
+                <Table>
+                  <thead>
+                    <tr>
+                      <th>Id</th>
+                      <th>Hook</th>
+                      <th>Session</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>RecipesController#index</td>
+                      <td>12345</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>RecipesController#index</td>
+                      <td>12346</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>RecipesController#show</td>
+                      <td>12346</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>RecipesController#delete</td>
+                      <td>12347</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>RecipesController#index</td>
+                      <td>12346</td>
+                    </tr>
+                  </tbody>
+                </Table>
               </Box>
             </Box>
           </Split>
