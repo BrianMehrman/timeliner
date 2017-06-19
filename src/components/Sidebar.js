@@ -6,7 +6,7 @@ import Header from 'grommet/components/Header';
 import Anchor from 'grommet/components/Anchor';
 import Box from 'grommet/components/Box';
 
-const SideMenu = ({...props}) => {
+const SideMenu = () => {
   return (
   <Sidebar colorIndex='neutral-1'
     pad='none'
@@ -15,13 +15,10 @@ const SideMenu = ({...props}) => {
       <Box flex='grow' justify='start'>
         <Menu primary={true}>
           <Anchor href='#' className='active'>
-            First
+            Dashboard
           </Anchor>
           <Anchor href='#'>
-            Second
-          </Anchor>
-          <Anchor href='#'>
-            Third
+            Hooks
           </Anchor>
         </Menu>
       </Box>

@@ -1,15 +1,32 @@
 import React from 'react';
+import Timeline from 'react-visjs-timeline'
 
-import Hero from 'grommet/components/Hero';
 import Box from 'grommet/components/Box';
-import Heading from 'grommet/components/Heading';
 
-const TimeGraph = ({...props}) => {
+import './TimeGraph.css';
+
+const TimeGraph = ({ reports }) => {
+  const attributes = {
+    items: reports,
+    options: {
+      format: {
+        minorLabels: {
+          minute: 'h:mma',
+          hour: 'ha'
+        }
+      },
+      width: '100%',
+    }
+  };
+
   return (
-    <Box direction='row' justify='center' align='center' size={{height: 'small'}} colorIndex='light-2'>
-      <Hero>
-        <Heading>Hero</Heading>
-      </Hero>
+    <Box className='Timeline'
+         direction='row'
+         justify='center'
+         align='center'
+         flex={true}
+         colorIndex='light-2'>
+      <Timeline {...attributes} />
     </Box>
   )
 }

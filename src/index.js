@@ -5,7 +5,7 @@ import  store from './store';
 import App from './App';
 
 import '../node_modules/grommet/grommet-hpe.min.css';
-
+import './index.css';
 
 render(
   <Provider store={store()}>

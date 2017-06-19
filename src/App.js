@@ -1,7 +1,5 @@
 // @flow
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import _ from 'lodash';
 
 import './css/App.css';
 
@@ -12,19 +10,13 @@ import App from 'grommet/components/App';
 import Split from 'grommet/components/Split';
 
 class Main extends Component {
-  constructor() {
-    super();
-
-    this.state = {};
-  }
-
   render() {
     return (
       <div className='Main'>
         <App className='wrap container-fluid'>
           <Split separator={true} flex='right'>
-            { Sidebar() }
-            { TimelineDashboard() }
+            <Sidebar />
+            <TimelineDashboard />
           </Split>
         </App>
       </div>
@@ -32,6 +24,5 @@ class Main extends Component {
   }
 }
 
-let data = (state) => ({});
 
-export default connect(data)(Main);
+export default Main;
